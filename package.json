@@ -1,0 +1,28 @@
+{
+  "name": "clean-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alperbayram/Clean-Blog.git"
+  },
+  "keywords": [],
+  "author": "alperbayram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alperbayram/Clean-Blog/issues"
+  },
+  "homepage": "https://github.com/alperbayram/Clean-Blog#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
