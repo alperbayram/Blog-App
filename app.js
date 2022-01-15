@@ -22,7 +22,7 @@ app.use(express.json());
 app.get('/', async (req, res) => {
   const posts = await Post.find({});
   res.render('index', {
-    posts
+    posts,
   });
 });
 app.get('/about', (req, res) => {
@@ -30,6 +30,14 @@ app.get('/about', (req, res) => {
 });
 app.get('/add_post', (req, res) => {
   res.render('add_post');
+});
+
+app.get('/posts/:id', async (req, res) => {
+  console.log(req.params.id);
+  const posts = await Post.findById(req.params.id);
+  res.render('post', {
+    posts,
+  });
 });
 
 app.post('/post', async (req, res) => {
