@@ -32,12 +32,25 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-        <p>  <%= posts.detail %><p>
-        
+        <p><%= posts.detail %><p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <div class="pr-3">
+          <a href="/posts/edit/<%= posts._id %>">
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Update</button>
+      </a>
+        </div>
+        <div>
+          <a href="/posts/<%= posts._id %>?_method=DELETE" onclick="return confirm('ARE YOU SURE ?')">
+        <button  class="btn btn-danger" id="sendMessageButton">Delete</button>
+      </a>
         </div>
       </div>
     </div>
+    
   </article>
+  
 
   <hr>
 
