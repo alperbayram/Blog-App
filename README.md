@@ -118,7 +118,7 @@ Install NPM packages
 
 ## Contact
 
-<p><a href="github.com/alperbayram"><h4>alperbayram</h4></a>
+<p><a href="https://github.com/alperbayram"><h4>alperbayram</h4></a>
 <a href="https://twitter.com/alperbayrmm" target="blank">
 <img src="https://img.shields.io/twitter/follow/alperbayrmm?style=social" alt="alperbayrmm" /></a> </p>
 
