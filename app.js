@@ -4,14 +4,15 @@ const mongoose = require('mongoose');
 const PostController = require('./controllers/PostControllers');
 const PageController = require('./controllers/PageControllers');
 var methodOverride = require('method-override');
-
+const dotenv = require('dotenv');
 const app = express();
 
+dotenv.config();
 //connect db
-mongoose.connect('mongodb://localhost/clean-blog-db', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.e93kf.mongodb.net/cleanblog-db?retryWrites=true&w=majority`
+);
+// mongoose.connect('mongodb://localhost/cleanblog-db');
 
 //template engine
 app.set('view engine', 'ejs');
@@ -37,7 +38,7 @@ app.get('/about', PageController.aboutPage);
 app.get('/add_post', PageController.addPage);
 app.get('/posts/edit/:id', PageController.editPage);
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`sunucu ${port} portunda oluşturuldu.`);

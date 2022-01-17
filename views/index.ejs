@@ -35,7 +35,7 @@
             </h3>
           </a>
           <p class="post-meta">Posted by alper
-            on  <%= posts[i].dateCreated%></p>
+            on  <%= posts[i].dateCreated.toISOString().split('T')[0] %></p>
         </div>
         <hr>
         <% } %>

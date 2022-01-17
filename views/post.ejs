@@ -20,7 +20,7 @@
             
             <span class="meta">Posted by
               <a href="#">Start Bootstrap</a>
-              on <%= posts.dateCreated %></span>
+              on <%= posts.dateCreated.toISOString().split('T')[0] %></span>
           </div>
         </div>
       </div>
